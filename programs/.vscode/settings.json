@@ -1,0 +1,10 @@
+{
+    "files.exclude": {
+        "**/.gitignore": true,
+//        "**/common": true,
+        "**/.vscode": true,
+        "**/build": true,
+        "**/Makefile": true,
+        "CSU1102x.code-workspace": true
+    }
+}

@@ -1,0 +1,8 @@
+# ignore all build directories
+**/build
+
+# ignore Cortex Debug settings
+.cortex-debug.*
+
+# platform-specific ignores
+.DS_Store

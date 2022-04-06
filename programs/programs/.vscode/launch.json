@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "name": "Emulate current ARM .s file",
+            "cwd": "${fileDirname}",
+            "executable": "./build/firmware.elf",
+            "servertype":"qemu",
+            "cpu": "cortex-m4",
+            "machine": "STM32F4-Discovery",
+            "serverpath": "${config:qemu-system-arm}",
+            "runToMain": false,
+            "overrideGDBServerStartedRegex": "(qemu)",
+            "postStartSessionCommands": ["break Main", "break End_Main", "continue"]
+        },
+        {
+            "type": "cortex-debug",
+            "request": "attach",
+            "name": "Graphic Emulate current ARM .s file",
+            "preLaunchTask": "Launch Emulator with Graphic",
+            "cwd": "${fileDirname}",
+            "executable": "./build/firmware.elf",
+            "servertype":"external",
+            "gdbTarget": "localhost:56789",
+            "postAttachCommands": ["break Main", "break End_Main"]
+        }
+    ]
+}

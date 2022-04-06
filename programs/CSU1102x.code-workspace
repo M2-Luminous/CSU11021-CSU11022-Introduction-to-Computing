@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": ".",
+			"name": "programs"
+		}
+	],
+	"extensions": {
+		"recommendations": [
+		  "dan-c-underwood.arm",
+		  "marus25.cortex-debug",
+		  "marus25.cortex-debug-dp-stm32f4"
+		]
+	}
+}
